@@ -50,7 +50,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+STATIC_PATH = os.path.join( os.path.dirname(__file__) , 'static' )
 ROOT_URLCONF = 'AssetsAdmin.urls'
+
+
+
+
 
 TEMPLATES = [
     {

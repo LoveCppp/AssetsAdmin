@@ -20,7 +20,7 @@ class Port(models.Model):
 
 class Iplist(models.Model):
     ip = models.CharField(max_length=255)
-    port = modelslll.TextField()
+    port = models.TextField()
     createtime = models.DateTimeField()
     class Meta:
         db_table = 'iplist'
