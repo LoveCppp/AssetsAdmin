@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'assets',
 ]
+STATIC_PATH = os.path.join( os.path.dirname(__file__) , 'static' )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-STATIC_PATH = os.path.join( os.path.dirname(__file__) , 'static' )
 ROOT_URLCONF = 'AssetsAdmin.urls'
 
 
