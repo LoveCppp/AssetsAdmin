@@ -1,0 +1,52 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<div class="row">
+
+            <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">domain</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <a href="/admin/domain/add/" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">add domain
+
+                        </a>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">domain</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="white-box">
+                        <h3 class="box-title">Basic Table</h3>
+                        <p class="text-muted">Add class <code>.table</code></p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>domain</th>
+                                        <th>statue</th>
+                                        <th>time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {%  for line in domainlist %}
+                                    <tr>
+                                        <td>{{ line.id}}</td>
+                                        <td>{{ line.domain}}</td>
+                                        <td>{{ line.statue}}</td>
+                                        <td>{{ line.createtime}}</td>
+                                    </tr>
+                                    {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+{% endblock %}

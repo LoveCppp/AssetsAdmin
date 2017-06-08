@@ -24,3 +24,10 @@ class Iplist(models.Model):
     createtime = models.DateTimeField()
     class Meta:
         db_table = 'iplist'
+
+class Domain(models.Model):
+    domain = models.CharField(max_length=255)
+    statue = models.IntegerField(default=0)
+    createtime = models.DateTimeField()
+    class Meta:
+        db_table = 'domain'
